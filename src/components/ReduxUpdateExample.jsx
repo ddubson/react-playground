@@ -2,22 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'react-bootstrap';
 
-export const ReduxUpdateExample = ({ myVariables, actions }) => (
+export const ReduxUpdateExample = ({ metrics, actions }) => (
   <div className="card">
     <div className="card-header">
       Redux State Update Example
     </div>
     <div className="card-block">
       <h4 className="card-title">Updating Redux State</h4>
-      <p className="card-text">Variable: {myVariables.myVar}</p>
+      <p className="card-text">Click Count: {metrics.clickCount}</p>
       <p>
         <Button
-          bsStyle="info"
-          onClick={() => {
-            actions.updateMyVar();
-          }}
+          bsStyle="success"
+          onClick={actions.increaseClickCount}
         >
-          Click to update Redux state.
+          +
+        </Button>
+        <Button
+          bsStyle="warning"
+          onClick={actions.decreaseClickCount}
+        >
+          -
         </Button>
       </p>
     </div>
@@ -26,19 +30,20 @@ export const ReduxUpdateExample = ({ myVariables, actions }) => (
 
 ReduxUpdateExample.defaultProps = {
   actions: {
-    updateMyVar: () => {
+    increaseClickCount: () => {
     },
   },
-  myVariables: {
-    myVar: '',
+  metrics: {
+    clickCount: '',
   },
 };
 
 ReduxUpdateExample.propTypes = {
   actions: PropTypes.shape({
-    updateMyVar: PropTypes.func.isRequired,
+    increaseClickCount: PropTypes.func.isRequired,
+    decreaseClickCount: PropTypes.func.isRequired,
   }),
-  myVariables: PropTypes.shape({
-    myVar: PropTypes.string,
+  metrics: PropTypes.shape({
+    clickCount: PropTypes.number,
   }),
 };

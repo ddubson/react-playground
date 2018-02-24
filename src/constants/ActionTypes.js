@@ -1,3 +1,5 @@
-const UPDATE_MY_VAR = 'UPDATE_MY_VAR';
+export const metricsActions = {
+  INCREASE_CLICK_COUNT: 'INCREASE_CLICK_COUNT',
+  DECREASE_CLICK_COUNT: 'DECREASE_CLICK_COUNT',
+};
 
-export { UPDATE_MY_VAR as default };

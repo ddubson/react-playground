@@ -2,19 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import * as MyVarActions from '../actions';
+import * as Actions from '../actions';
 import MainSection from '../components/MainSection';
 
-const App = ({ myVariables, actions }) => (
-  <MainSection myVariables={myVariables} actions={actions} />
+const App = ({ metrics, actions }) => (
+  <MainSection metrics={metrics} actions={actions} />
 );
 
 const mapStateToProps = state => ({
-  myVariables: state.myvars,
+  metrics: state.metrics,
 });
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(MyVarActions, dispatch),
+  actions: bindActionCreators(Actions, dispatch),
 });
 
 export default connect(
@@ -23,10 +23,11 @@ export default connect(
 )(App);
 
 App.propTypes = {
-  myVariables: PropTypes.shape({
-    myVar: PropTypes.string.isRequired,
+  metrics: PropTypes.shape({
+    clickCount: PropTypes.string.isRequired,
   }).isRequired,
   actions: PropTypes.shape({
-    updateMyVar: PropTypes.func.isRequired,
+    increaseClickCount: PropTypes.func.isRequired,
+    decreaseClickCount: PropTypes.func.isRequired,
   }).isRequired,
 };

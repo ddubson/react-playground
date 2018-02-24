@@ -1,5 +1,8 @@
-import UPDATE_MY_VAR from '../constants/ActionTypes';
+import { metricsActions } from '../constants/ActionTypes';
 
-const updateMyVar = myVar => ({ type: UPDATE_MY_VAR, payload: myVar });
+const increaseClickCount =
+  () => ({ type: metricsActions.INCREASE_CLICK_COUNT });
+const decreaseClickCount =
+  () => ({ type: metricsActions.DECREASE_CLICK_COUNT });
 
-export { updateMyVar };
+export { increaseClickCount, decreaseClickCount };

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import myvars from './myvars';
+import metricsReducer from './metricsReducer';
 
 const rootReducer = combineReducers({
-  myvars,
+  metrics: metricsReducer,
 });
 
 export default rootReducer;

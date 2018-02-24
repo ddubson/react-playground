@@ -4,18 +4,19 @@ import { ReduxUpdateExample } from './ReduxUpdateExample';
 
 const MainSection = props => (
   <div className="container">
-    <ReduxUpdateExample actions={props.actions} myVariables={props.myVariables} />
+    <ReduxUpdateExample actions={props.actions} metrics={props.metrics} />
   </div>
 );
 
 export { MainSection as default };
 
 MainSection.propTypes = {
-  myVariables: PropTypes.shape({
-    myVar: PropTypes.string.isRequired,
+  metrics: PropTypes.shape({
+    clickCount: PropTypes.number.isRequired,
   }).isRequired,
   actions: PropTypes.shape({
-    updateMyVar: PropTypes.func.isRequired,
+    increaseClickCount: PropTypes.func.isRequired,
+    decreaseClickCount: PropTypes.func.isRequired,
   }).isRequired,
 };
 
