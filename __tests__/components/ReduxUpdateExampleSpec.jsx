@@ -4,11 +4,9 @@ import { ReduxUpdateExample } from '../../src/components/ReduxUpdateExample';
 
 describe('ReduxUpdateExample', () => {
   const props = {
-    metrics: { clickCount: 2 },
-    actions: {
-      increaseClickCount: jest.fn(),
-      decreaseClickCount: jest.fn(),
-    },
+    clickCount: 2,
+    increaseClickCount: jest.fn(),
+    decreaseClickCount: jest.fn(),
   };
 
   it('should display Hello text', () => {

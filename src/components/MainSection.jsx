@@ -1,22 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { ReduxUpdateExample } from './ReduxUpdateExample';
+import ReduxUpdateExample from './ReduxUpdateExample';
 
-const MainSection = props => (
+const MainSection = () => (
   <div className="container">
-    <ReduxUpdateExample actions={props.actions} metrics={props.metrics} />
+    <ReduxUpdateExample />
   </div>
 );
 
 export { MainSection as default };
-
-MainSection.propTypes = {
-  metrics: PropTypes.shape({
-    clickCount: PropTypes.number.isRequired,
-  }).isRequired,
-  actions: PropTypes.shape({
-    increaseClickCount: PropTypes.func.isRequired,
-    decreaseClickCount: PropTypes.func.isRequired,
-  }).isRequired,
-};
 
