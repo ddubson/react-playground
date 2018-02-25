@@ -5,10 +5,6 @@ import { increaseClickCount, decreaseClickCount } from '../actions';
 import PureButton from './PureButton';
 
 export class ReduxUpdateExample extends PureComponent {
-  componentWillUpdate() {
-    console.log('component updating.');
-  }
-
   render() {
     const { clickCount, increaseClickCount, decreaseClickCount } = this.props;
 

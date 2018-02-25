@@ -1,4 +1,4 @@
-import { metricsActions } from '../constants/ActionTypes';
+import { metricsActions } from '../constants';
 
 const increaseClickCount =
   () => ({ type: metricsActions.INCREASE_CLICK_COUNT });

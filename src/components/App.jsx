@@ -1,11 +1,14 @@
 import React from 'react';
+import { whyDidYouUpdate } from 'why-did-you-update';
 import ReduxUpdateExample from './ReduxUpdateExample';
+import '../styles/app.scss';
 
-const MainSection = () => (
+whyDidYouUpdate(React);
+
+const App = () => (
   <div className="container">
     <ReduxUpdateExample />
   </div>
 );
 
-export { MainSection as default };
-
+export default App;
