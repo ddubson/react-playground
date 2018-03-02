@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ddubson/react-playground.svg?branch=master)](https://travis-ci.org/ddubson/react-playground)
+
 # React Playground
 
 # Install
