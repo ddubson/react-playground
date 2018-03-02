@@ -1,8 +1,6 @@
 import React from 'react';
 import { whyDidYouUpdate } from 'why-did-you-update';
 import ReduxUpdateExample from './ReduxUpdateExample';
-import '../styles/app.scss';
-import '../styles/sidebar.scss';
 import Sidebar from './Sidebar';
 
 whyDidYouUpdate(React);
