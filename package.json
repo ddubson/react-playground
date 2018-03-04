@@ -2,9 +2,9 @@
   "name": "react-playground",
   "version": "1.0.0",
   "description": "React Playground",
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "scripts": {
-    "dist": "npm run test && webpack --config webpack.prod.js",
+    "dist": "npm run test && webpack -p --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js --progress",
     "test": "jest && eslint src/* __tests__/*",
     "watch": "jest --watchAll",
@@ -21,11 +21,7 @@
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "request": "^2.83.0",
     "why-did-you-update": "^0.1.1"
-  },
-  "peerDependencies": {
-    "request": "^2.83.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
