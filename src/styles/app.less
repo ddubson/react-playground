@@ -1,8 +1,39 @@
 /* LESS examples */
 
-// Defining variables
+// Defining variables (constants)
 @bg-color: #fafafa;
+@normal-font: 14px;
+@default-padding: 10px;
+
+// Mixin example (with default value)
+.rounded-corners-all(@size: 5px) {
+  border-radius: @size;
+  -webkit-border-radius: @size;
+  -moz-border-radius: @size;
+}
 
 body {
   background-color: @bg-color;
+}
+
+// Nesting example
+.container {
+  p {
+    font-size: @normal-font;
+  }
+
+  // Calculations inline are allowed
+  h1 {
+    font-size: @normal-font * 2px;
+  }
+
+  // Mixin usage
+  .card {
+    margin-top: 10px;
+    .rounded-corners-all(10px);
+  }
+
+  .card-block {
+    padding: @default-padding;
+  }
 }
