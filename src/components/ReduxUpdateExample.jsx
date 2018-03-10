@@ -1,13 +1,11 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { increaseClickCount, decreaseClickCount } from '../actions';
 import PureButton from './PureButton';
+import { increaseClickCount, decreaseClickCount } from '../actions';
 
 export class ReduxUpdateExample extends PureComponent {
   render() {
-    const { clickCount, increaseClickCount, decreaseClickCount } = this.props;
-
     return (
       <div className="card">
         <div className="card-header">
@@ -15,17 +13,17 @@ export class ReduxUpdateExample extends PureComponent {
         </div>
         <div className="card-block">
           <h4 className="card-title">Updating Redux State</h4>
-          <p className="card-text">Click Count: {clickCount}</p>
+          <p className="card-text">Click Count: {this.props.clickCount}</p>
           <p>
             <PureButton
               bsStyle="success"
-              onClick={increaseClickCount}
+              onClick={this.props.increaseClickCount}
             >
               +
             </PureButton>
             <PureButton
               bsStyle="warning"
-              onClick={decreaseClickCount}
+              onClick={this.props.decreaseClickCount}
             >
               -
             </PureButton>

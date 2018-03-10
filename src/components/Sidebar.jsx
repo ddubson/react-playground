@@ -9,10 +9,10 @@ class Sidebar extends PureComponent {
         </div>
 
         <ul className="list-unstyled components">
-          <li className="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li className="active"><a href="http://localhost">Home</a></li>
+          <li><a href="http://localhost">About</a></li>
+          <li><a href="http://localhost">Portfolio</a></li>
+          <li><a href="http://localhost">Contact</a></li>
         </ul>
       </nav>
     );

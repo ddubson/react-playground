@@ -6,9 +6,9 @@
   "scripts": {
     "dist": "npm run test && webpack -p --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js --progress",
-    "test": "jest && eslint src/* __tests__/*",
+    "test": "jest && eslint --ext .js,.jsx src/* __tests__/*",
     "watch": "jest --watchAll",
-    "lint": "eslint --fix src/* __tests__/*"
+    "lint": "eslint --fix --ext .js,.jsx src/* __tests__/*"
   },
   "repository": "https://github.com/ddubson/react-playground",
   "author": "Dmitriy Dubson",
