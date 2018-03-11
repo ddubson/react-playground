@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
-import { ReduxUpdateExample } from '../../src/components/ReduxUpdateExample';
-import ConnectedReduxUpdateExample from '../../src/components/ReduxUpdateExample';
+import { ReduxUpdateExample } from '../../../src/components/pages/ReduxUpdateExample';
+import ConnectedReduxUpdateExample from '../../../src/components/pages/ReduxUpdateExample';
 
 describe('ReduxUpdateExample', () => {
   const props = overriddenProps => ({

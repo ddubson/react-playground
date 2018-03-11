@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import PureButton from './PureButton';
-import { increaseClickCount, decreaseClickCount } from '../actions';
+import PureButton from '../PureButton';
+import { increaseClickCount, decreaseClickCount } from '../../actions/index';
 
 export class ReduxUpdateExample extends PureComponent {
   render() {

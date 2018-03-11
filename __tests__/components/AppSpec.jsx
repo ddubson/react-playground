@@ -1,10 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../../src/components/App';
+import ReduxUpdateExample from '../../src/components/pages/ReduxUpdateExample';
 
 describe('App', () => {
-  it('should render ReduxUpdateExample', () => {
+  it('should path to State Update Example', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('Connect(ReduxUpdateExample)').length).toBe(1);
+    expect(wrapper.find('Route[path="/examples/state-update"]').props().component)
+      .toEqual(ReduxUpdateExample);
   });
 });

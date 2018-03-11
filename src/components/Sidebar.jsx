@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import { Link } from 'react-router-dom';
+import { routes } from '../constants';
 
 class Sidebar extends PureComponent {
   render() {
@@ -9,10 +11,12 @@ class Sidebar extends PureComponent {
         </div>
 
         <ul className="list-unstyled components">
-          <li className="active"><a href="http://localhost">Home</a></li>
-          <li><a href="http://localhost">About</a></li>
-          <li><a href="http://localhost">Portfolio</a></li>
-          <li><a href="http://localhost">Contact</a></li>
+          <Link to={routes.HOME}>
+            <li>Home</li>
+          </Link>
+          <Link to={routes.STATE_UPDATE_EXAMPLE_ROUTE}>
+            <li>State Update Example</li>
+          </Link>
         </ul>
       </nav>
     );
