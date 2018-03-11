@@ -26,3 +26,7 @@ yarn watch
 ```
 yarn dist
 ```
+
+## Heroku
+
+`postinstall` script is triggered automatically after `install` is run, so a prod bundle is generated.
