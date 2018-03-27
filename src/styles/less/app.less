@@ -1,16 +1,10 @@
 /* LESS examples */
+@import "mixins";
 
 // Defining variables (constants)
 @bg-color: #fafafa;
 @normal-font: 14px;
 @default-padding: 10px;
-
-// Mixin example (with default value)
-.rounded-corners-all(@size: 5px) {
-  border-radius: @size;
-  -webkit-border-radius: @size;
-  -moz-border-radius: @size;
-}
 
 body {
   background-color: @bg-color;
@@ -30,10 +24,19 @@ body {
   // Mixin usage
   .card {
     margin-top: 10px;
-    .rounded-corners-all(10px);
+    .rounded-corners(10px);
   }
 
   .card-block {
     padding: @default-padding;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  // Produces a:hover in CSS
+  &:hover {
+    text-decoration: underline;
   }
 }

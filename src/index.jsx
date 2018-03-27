@@ -4,9 +4,9 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import reducer from './reducers';
-import './styles/app.scss';
-import './styles/app.less';
-import './styles/sidebar.scss';
+import './styles/sass/app.scss';
+import './styles/less/app.less';
+import './styles/sass/sidebar.scss';
 
 const store = createStore(reducer);
 

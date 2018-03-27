@@ -12,6 +12,7 @@
     "import/no-named-as-default": "off",
     "react/prefer-stateless-function": "off",
     "import/no-duplicates": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "linebreak-style": "off"
   }
 }
